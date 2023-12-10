@@ -1,19 +1,57 @@
 ---
-title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2020-03-16T05:35:07.322Z'
+title: "Hello World! Starting this Blog!"
+excerpt: "Hello world! I hope that i use this space well to document some of my dev life. New posts anytime! To see how I got started and some of the backstory, dive in!"
+coverImage: "/assets/blog/hello-world/hello-world.png"
+date: "2023-12-09T17:04:43+05:30"
 author:
-  name: Tim Neutkens
-  picture: '/assets/blog/authors/tim.jpeg'
+  name: Debopam Gupta
+  picture: "/assets/blog/authors/dg.jpeg"
 ogImage:
-  url: '/assets/blog/hello-world/cover.jpg'
+  url: "/assets/blog/hello-world/hello-world.png"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+## Hello world!
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+I hope that I use this place to document some of my life. Maybe _once a month_ or so. Or maybe even _once a year_, who knows. I am not very good anyways with this routine thingy anyways. Actually I am not good at doing anything routinely or I cannot keep my enthusiasm for a long time and it dies off much sooner than expected. We'll see what happens to this!
 
-## Lorem Ipsum
+## If you are wondering how this blog is made...
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+It is powered by <a href="https://nextjs.org" data-link _target="blank">NextJS</a>. Yes some people I know will be like, _"NO! Not another bulk load of JS in my face! You **dont need all that** for a blog, you stupid!"_
+
+Yes, you are absolutely correct. This could be just plain HTML and a touch of CSS but I already was in my Web Dev journey and I was learning NextJS so I started modifying the <a href="https://vercel.com/templates/next.js/blog-starter-kit" data-link _target="blank">blog-starter</a> from NextJS.
+
+<!-- <img data-content-image src="/assets/blog"/> -->
+
+For the more tech-savvy people who like the nitty gritty technical details, it uses <code class="inline-code">remark</code> and some more processors from the <code class="inline-code">remark</code> family and some _neat little additions_ to its <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" data-link>Abstract Syntax Tree (AST)</a> parsing logic to keep certain attributes that would otherwise be stripped out in sanitization process before putting it on the page. I say _neat little additions_ but i almost couldn't figure how to keep certain attributes and tore my hair out. The sheer will and patience for a compsci degree guided me to come back later and now i am jumping with joy.
+
+(Why sanitize when I am the only one writing the blog? Because always, aLwAyS, ALWAYS, _ALWAYS_, **ALWAYS**, **_ALWAYS_** _sanitize_ user input)
+
+And since my friends try to think I am some **programming god** ( _which i absolutely am not_ ) and you probably are here to see some fancy technical life-changing code that you layman friends cannot understand, here's <code class="inline-code">Hello World</code>. IN MANY DIFFERENT LANGUAGES. ( look at comments )
+
+```js
+// JavaScript, TypeScript because web stuff
+const helloWorld = () => console.log("Hello World!");
+helloWorld();
+```
+
+```html
+<!-- HTML is not a programming language :p -->
+<pre> hello world! </pre>
+```
+
+```c
+// Bow down to C.
+int main() {
+  printf("Hello World!");
+  return 0;
+}
+```
+
+```java
+// yeah yeah i know, 3 billion devices run Java and so does mine
+class HelloWorld {
+  public static void main(String args[]) {
+    System.out.println("Hello World!");
+  }
+}
+```

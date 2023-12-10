@@ -1,15 +1,17 @@
+import { dmsans } from "./fonts";
+
 type Props = {
-  name: string
-  picture: string
-}
+  name: string;
+  picture: string;
+};
 
 const Avatar = ({ name, picture }: Props) => {
   return (
-    <div className="flex items-center">
-      <img src={picture} className="w-12 h-12 rounded-full mr-4" alt={name} />
-      <div className="text-xl font-bold">{name}</div>
+    <div className={`flex items-center ${dmsans.className}`}>
+      <img src={picture} className="w-8 h-8 mr-4 rounded-full" alt={name} />
+      <div className="text-lg italic">{name}</div>
     </div>
-  )
-}
+  );
+};
 
-export default Avatar
+export default Avatar;

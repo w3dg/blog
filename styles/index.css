@@ -1,3 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
+/* ir-black tomorrow-night-bright */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/ir-black.min.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body,
+header,
+footer,
+head {
+  @apply text-neutral-200 bg-black;
+}
+
+.intro-bg {
+  @apply bg-neutral-800;
+  background-image: url(https://images.pexels.com/photos/225769/pexels-photo-225769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+a[data-link] {
+  @apply text-sky-200 underline underline-offset-2 hover:text-sky-400;
+}
+
+img[data-content-image] {
+  @apply mx-auto my-10;
+  max-width: 80%;
+}
+
+code,
+pre {
+  @apply rounded;
+  font-family: "DM Mono", monospace;
+}
+
+code.inline-code {
+  @apply text-lime-500;
+}
+
+/* Scrollbar custom */
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track:horizontal {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar:horizontal {
+  width: 10px;
+  height: 8px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #aaa;
+
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    color-stop(0.5, rgba(255, 255, 255, 0.2)),
+    color-stop(0.5, transparent),
+    to(transparent)
+  );
+}
