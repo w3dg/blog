@@ -3,8 +3,6 @@ import cn from "classnames";
 
 import { LuArrowRight } from "react-icons/lu";
 
-import { EXAMPLE_PATH } from "../lib/constants";
-
 const Alert = () => {
   return (
     <div className={cn("border-b")}>

@@ -1,16 +1,18 @@
 ---
-title: "Hello World! Starting this Blog!"
-excerpt: "Hello world! I hope that i use this space well to document some of my dev life. New posts anytime! To see how I got started and some of the backstory, dive in!"
-coverImage: "/assets/blog/hello-world/hello-world.png"
+title: "Hello World!"
+excerpt: "Hello world! First Blog Post on this self made website! Let's dive a bit into how I put it together and why."
+coverImage: "/assets/blog/hello-world/hello-world.jpg"
 date: "2023-12-09T17:04:43+05:30"
 author:
   name: Debopam Gupta
   picture: "/assets/blog/authors/dg.jpeg"
 ogImage:
-  url: "/assets/blog/hello-world/hello-world.png"
+  url: "/assets/blog/hello-world/hello-world.jpg"
 ---
 
 ## Hello world!
+
+> “Be willing to be a beginner every single morning.”
 
 I hope that I use this place to document some of my life. Maybe _once a month_ or so. Or maybe even _once a year_, who knows. I am not very good anyways with this routine thingy anyways. Actually I am not good at doing anything routinely or I cannot keep my enthusiasm for a long time and it dies off much sooner than expected. We'll see what happens to this!
 
@@ -55,3 +57,21 @@ class HelloWorld {
   }
 }
 ```
+
+```py
+# Python is definitely a snake
+print("Hello world")
+```
+
+```bash
+# Here's some shell
+echo "Hello world!"
+```
+
+Well! That's it let us see how often i update this thing
+
+### References
+
+- `remark` : <a href="https://github.com/remarkjs/remark" data-link>https://github.com/remarkjs/remark</a>
+- NextJS : <a href="https://nextjs.org" data-link>https://nextjs.org</a>
+- TailwindCSS : <a href="https://tailwindcss.com/" data-link>https://tailwindcss.com/</a>

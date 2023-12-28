@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className={` ${dmsans.className} border-t border-neutral-200/20`}>
-      <div className="max-w-2xl p-24 mx-auto">
+    <footer className={` ${dmsans.className} border-t-2 border-brand-200/20`}>
+      <div className="max-w-2xl mx-auto p-14">
         <div className="grid grid-cols-1 gap-x-4 gap-y-2 place-items-center md:grid-cols-3">
           <h3 className={`${gabarito.className} text-2xl font-bold hover:underline`}>
             <Link href={"/"}>DG's Blog</Link>

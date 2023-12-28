@@ -1,15 +1,24 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { gabarito } from "./fonts";
+import Container from "./container";
 const Header = () => {
+  const pathname = usePathname();
+  const blogSlug = pathname.split("/").at(-1);
+
   return (
-    <h2
-      className={`mt-8 mb-20 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter ${gabarito.className}`}
-    >
-      <Link href="/" className="hover:underline">
-        DG's Blog
-      </Link>
-      .
-    </h2>
+    <Container>
+      <header className="flex items-center gap-4 py-4 border-b-2 border-b-brand-400">
+        <h2
+          className={`text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter ${gabarito.className}`}
+        >
+          <Link href="/" className="hover:underline">
+            DG's Blog
+          </Link>
+        </h2>
+        <p className={`${gabarito.className} text-lg before:content-["/"] before:mr-2 text-slate-400`}>{blogSlug}</p>
+      </header>
+    </Container>
   );
 };
 

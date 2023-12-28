@@ -11,27 +11,24 @@ type Props = {
   coverImage: string;
   date: string;
   author: Author;
+  excerpt: string;
 };
 
-const PostHeader = ({ title, coverImage, date, author }: Props) => {
+const PostHeader = ({ title, coverImage, date, author, excerpt }: Props) => {
   return (
-    <>
+    <header
+      className={`grid gap-5 py-5 ${dmsans.className} bg-gradient-to-b from-transparent to-transparent via-brand-600/50`}
+    >
       <PostTitle>{title}</PostTitle>
-      <div className="hidden max-w-2xl mx-auto md:block md:mb-12">
-        <Avatar name={author.name} picture={author.picture} />
-      </div>
-      <div className="max-w-2xl mx-auto mb-8 md:mb-16">
+      <p className="text-center text-brand-300 max-w-[60ch] mx-auto">{excerpt}</p>
+      <div className="max-w-4xl mx-auto my-2">
         <CoverImage title={title} src={coverImage} />
       </div>
-      <div className={`max-w-2xl mx-auto ${dmsans.className}`}>
-        <div className="block mb-6 md:hidden">
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
-        <div className="mb-6 text-lg italic text-neutral-400">
-          <DateFormatter dateString={date} />
-        </div>
+      <div className={`flex items-center gap-6 mx-auto max-w-full `}>
+        <Avatar name={author.name} picture={author.picture} />
+        <DateFormatter dateString={date} />
       </div>
-    </>
+    </header>
   );
 };
 

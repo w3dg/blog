@@ -1,18 +1,15 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "../../components/container";
 import PostBody from "../../components/post-body";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
+import Socials from "../../components/Socials";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
-import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
-
-import { dmsans, gabarito } from "../../components/fonts";
 
 type Props = {
   post: PostType;
@@ -28,23 +25,28 @@ export default function Post({ post, morePosts, preview }: Props) {
   }
   return (
     <Layout>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>{title}</title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} author={post.author} />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
+      <Header />
+      {router.isFallback ? (
+        <PostTitle>Loading…</PostTitle>
+      ) : (
+        <>
+          <article className="mb-32">
+            <Head>
+              <title>{title}</title>
+              <meta property="og:image" content={post.ogImage.url} />
+            </Head>
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+              excerpt={post.excerpt}
+            />
+            <PostBody content={post.content} />
+            <Socials></Socials>
+          </article>
+        </>
+      )}
     </Layout>
   );
 }
@@ -56,7 +58,16 @@ type Params = {
 };
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, ["title", "date", "slug", "author", "content", "ogImage", "coverImage"]);
+  const post = getPostBySlug(params.slug, [
+    "title",
+    "date",
+    "slug",
+    "author",
+    "content",
+    "ogImage",
+    "coverImage",
+    "excerpt",
+  ]);
   const content = await markdownToHtml(post.content || "");
 
   return {

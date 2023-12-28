@@ -17,7 +17,7 @@ type Props = {
 
 const HeroPost = ({ title, coverImage, date, excerpt, author, slug }: Props) => {
   return (
-    <section className="max-w-4xl mx-auto">
+    <section className="max-w-4xl pb-2 mx-auto">
       <div className="mb-8 md:mb-16">
         <CoverImage title={title} src={coverImage} slug={slug} />
       </div>

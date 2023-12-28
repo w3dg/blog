@@ -3,6 +3,9 @@
 For UTC Timestamp -
 https://time.lol/
 
+Color pallete -
+https://coolors.co/0d1b2a-111e2f-142133-1b263b-415a77-5c7490-778da9-c6ccd0-e0e1dd
+
 This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
 
 This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using Markdown files as the data source.
