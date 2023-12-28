@@ -12,13 +12,13 @@ const Footer = () => {
           </h3>
           <ul className="grid gap-1 p-2 place-items-center">
             <li>
-              <a className="flex items-center gap-2 hover:underline" href="">
+              <a className="flex items-center gap-2 hover:underline" href="https://dgdev.vercel.app" target="_blank">
                 <LuGlobe2></LuGlobe2>
                 <p>Website</p>
               </a>
             </li>
             <li>
-              <a className="flex items-center gap-2 hover:underline" href="">
+              <a className="flex items-center gap-2 hover:underline" href="https://github.com/w3dg" target="_blank">
                 <LuGithub></LuGithub>
                 <p>GitHub</p>
               </a>
@@ -26,13 +26,17 @@ const Footer = () => {
           </ul>
           <ul className="grid gap-1 p-2 place-items-center">
             <li>
-              <a className="flex items-center gap-2 hover:underline" href="">
+              <a className="flex items-center gap-2 hover:underline" href="https://dgsh.vercel.app/li" target="_blank">
                 <LuLinkedin></LuLinkedin>
                 <p>LinkedIn</p>
               </a>
             </li>
             <li>
-              <a className="flex items-center gap-2 hover:underline" href="">
+              <a
+                className="flex items-center gap-2 hover:underline"
+                href="https://instagram.com/its_not_dg"
+                target="_blank"
+              >
                 <LuInstagram></LuInstagram>
                 <p>Instagram</p>
               </a>
