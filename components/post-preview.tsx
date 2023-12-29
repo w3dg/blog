@@ -30,7 +30,7 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }: Props) 
         <DateFormatter dateString={date} />
       </div>
       <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
+      {/* <Avatar name={author.name} picture={author.picture} /> */}
     </div>
   );
 };
