@@ -8,6 +8,9 @@ author:
   picture: "/assets/blog/authors/dg.jpeg"
 ogImage:
   url: "/assets/blog/reflections-2023/reflections-2023.png"
+furtherReadings:
+  - name: Kicking off this blog with the classic hello world
+    link: "/posts/hello-world"
 ---
 
 ## Reflections for the year 2023

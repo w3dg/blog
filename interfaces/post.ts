@@ -1,16 +1,22 @@
-import type Author from './author'
+import type Author from "./author";
 
-type PostType = {
-  slug: string
-  title: string
-  date: string
-  coverImage: string
-  author: Author
-  excerpt: string
-  ogImage: {
-    url: string
-  }
-  content: string
+interface FurtherPost {
+  name: string;
+  link: string;
 }
 
-export default PostType
+type PostType = {
+  slug: string;
+  title: string;
+  date: string;
+  coverImage: string;
+  author: Author;
+  excerpt: string;
+  ogImage: {
+    url: string;
+  };
+  content: string;
+  furtherReadings?: FurtherPost[];
+};
+
+export default PostType;

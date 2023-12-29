@@ -23,6 +23,7 @@ export default function Post({ post, morePosts, preview }: Props) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <Layout>
       <Header />
@@ -42,7 +43,11 @@ export default function Post({ post, morePosts, preview }: Props) {
               author={post.author}
               excerpt={post.excerpt}
             />
-            <PostBody content={post.content} />
+            {post.furtherReadings && post.furtherReadings.length != 0 ? (
+              <PostBody content={post.content} furtherReadings={post.furtherReadings} />
+            ) : (
+              <PostBody content={post.content} furtherReadings={[]} />
+            )}
             <Socials></Socials>
           </article>
         </>
@@ -67,6 +72,7 @@ export async function getStaticProps({ params }: Params) {
     "ogImage",
     "coverImage",
     "excerpt",
+    "furtherReadings",
   ]);
   const content = await markdownToHtml(post.content || "");
 

@@ -2,12 +2,14 @@ import Link from "next/link";
 import Container from "./container";
 import { dmsans } from "./fonts";
 import markdownStyles from "./markdown-styles.module.css";
+import FurtherReading, { FurtherPost } from "./furtherreading";
 
 type Props = {
   content: string;
+  furtherReadings?: FurtherPost[];
 };
 
-const PostBody = ({ content }: Props) => {
+const PostBody = ({ content, furtherReadings }: Props) => {
   return (
     <Container>
       <div className={`max-w-3xl mx-auto ${dmsans.className}`}>
@@ -15,6 +17,7 @@ const PostBody = ({ content }: Props) => {
         <Link href={"/"} className="underline text-brand-300 hover:text-brand-200 underline-offset-2">
           Continue to homepage
         </Link>
+        {furtherReadings.length == 0 ? <></> : <FurtherReading furtherPosts={furtherReadings}></FurtherReading>}
       </div>
     </Container>
   );
