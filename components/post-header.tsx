@@ -17,7 +17,7 @@ type Props = {
 const PostHeader = ({ title, coverImage, date, author, excerpt }: Props) => {
   return (
     <header
-      className={`grid gap-5 py-5 ${dmsans.className} bg-gradient-to-b from-transparent to-transparent via-brand-600/50`}
+      className={`grid gap-5 py-5 ${dmsans.className} bg-gradient-to-b from-transparent to-transparent via-brand-700/50`}
     >
       <PostTitle>{title}</PostTitle>
       <p className="text-center text-brand-300 max-w-[60ch] mx-auto px-4">{excerpt}</p>

@@ -4,16 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "brand-100": "#E0E1DD",
-        "brand-200": "#C6CCD0",
-        "brand-300": "#778DA9",
-        "brand-400": "#5C7490",
-        "brand-500": "#415A77",
-        "brand-600": "#2E4059",
-        "brand-700": "#1B263B",
-        "brand-800": "#142133",
-        "brand-900": "#111E2F",
-        "brand-1000": "#0D1B2A",
+        "brand-100": "#f8f9fa",
+        "brand-200": "#e9ecef",
+        "brand-300": "#dee2e6",
+        "brand-400": "#ced4da",
+        "brand-500": "#adb5bd",
+        "brand-600": "#6c757d",
+        "brand-700": "#495057",
+        "brand-800": "#343a40",
+        "brand-900": "#212529",
+        "brand-1000": "#0b090a",
       },
       spacing: {
         28: "7rem",

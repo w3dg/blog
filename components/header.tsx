@@ -16,7 +16,7 @@ const Header = () => {
             DG's Blog
           </Link>
         </h2>
-        <p className={`${gabarito.className} text-lg before:content-["/"] before:mr-2 text-slate-400`}>{blogSlug}</p>
+        <p className={`${gabarito.className} text-lg before:content-["/"] before:mr-2 text-brand-500`}>{blogSlug}</p>
       </header>
     </Container>
   );

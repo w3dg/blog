@@ -12,7 +12,7 @@ const SocialButton = ({ link }: { link: SocialLink }) => {
     <Link
       href={link.link}
       target="_blank"
-      className="flex items-center justify-center gap-2 p-3 rounded-md hover:text-brand-100 bg-brand-500/60 group"
+      className="flex items-center justify-center gap-2 p-3 rounded-md hover:bg-brand-700 bg-brand-800 group"
     >
       {link.name}
       <span className="p-0.5 transition-colors -rotate-45 rounded-full group-hover:bg-brand-800">

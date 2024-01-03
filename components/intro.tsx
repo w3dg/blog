@@ -3,7 +3,7 @@ import { dmsans, gabarito } from "./fonts";
 const Intro = () => {
   return (
     <section
-      className={`flex flex-col gap-3 items-center justify-center w-full mx-auto py-16 mb-16 border-b border-neutral-300/10 bg-gradient-to-br from-transparent to-transparent via-brand-700/80`}
+      className={`flex flex-col gap-3 items-center justify-center w-full mx-auto py-16 mb-16 border-b border-neutral-300/10 bg-gradient-to-br from-transparent to-transparent via-brand-800/80`}
     >
       <h1 className={`text-5xl font-bold leading-tight md:text-7xl ${gabarito.className}`}>DG's Blog</h1>
       <p className={`pt-3 text-lg text-center md:text-xl ${dmsans.className}`}>personal blog about tech and life</p>

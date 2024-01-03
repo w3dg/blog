@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
 /* ir-black tomorrow-night-bright */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css");
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css"); */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/ir-black.min.css");
 
 @tailwind base;
 @tailwind components;
@@ -18,7 +19,7 @@ head {
 }
 
 a[data-link] {
-  @apply text-sky-200 underline underline-offset-2 hover:text-sky-400;
+  @apply text-brand-400 underline underline-offset-2 hover:text-sky-500;
 }
 
 img[data-content-image] {
@@ -39,7 +40,7 @@ pre + pre {
 }
 
 code.inline-code {
-  @apply text-sky-300;
+  @apply text-brand-400;
 }
 
 /* Scrollbar custom */

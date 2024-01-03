@@ -19,7 +19,7 @@
 }
 
 .markdown blockquote {
-  @apply px-4 py-0.5 border-l-4 border-l-brand-300 bg-gradient-to-tr from-brand-700/70 to-brand-400/70 italic;
+  @apply px-4 py-0.5 border-l-4 border-l-brand-300/60 bg-gradient-to-tr from-brand-900/70 to-brand-700/60 italic;
 }
 
 .markdown h3 {
