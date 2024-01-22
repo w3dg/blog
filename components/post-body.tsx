@@ -14,10 +14,10 @@ const PostBody = ({ content, furtherReadings }: Props) => {
     <Container>
       <div className={`max-w-3xl mx-auto ${dmsans.className}`}>
         <div className={markdownStyles["markdown"]} dangerouslySetInnerHTML={{ __html: content }} />
-        <Link href={"/"} className="underline text-brand-300 hover:text-brand-200 underline-offset-2">
+        {furtherReadings.length == 0 ? <></> : <FurtherReading furtherPosts={furtherReadings}></FurtherReading>}
+        <Link href={"/"} className="underline text-brand-500 hover:text-brand-200 underline-offset-2">
           Continue to homepage
         </Link>
-        {furtherReadings.length == 0 ? <></> : <FurtherReading furtherPosts={furtherReadings}></FurtherReading>}
       </div>
     </Container>
   );
