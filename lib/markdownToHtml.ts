@@ -6,22 +6,17 @@ import rehypeRaw from "rehype-raw";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import { unified } from "unified";
-import rehypeHighlight from "rehype-highlight";
+// import rehypeHighlight from "rehype-highlight";
+import rehypeShiki from "@shikijs/rehype";
 
 export default async function markdownToHtml(markdown: string) {
   const file = await unified()
     .use(remarkParse)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
-    .use(rehypeSanitize, {
-      ...defaultSchema,
-      attributes: {
-        ...defaultSchema.attributes,
-        "*": ["data*"],
-        code: [["className"]],
-      },
+    .use(rehypeShiki, {
+      theme: "vitesse-dark",
     })
-    .use(rehypeHighlight)
     .use(rehypeStringify)
     .process(markdown);
 

@@ -19,7 +19,7 @@ head {
 }
 
 a[data-link] {
-  @apply text-brand-400 underline underline-offset-2 hover:text-sky-500;
+  @apply text-amber-200/80 underline underline-offset-2 hover:text-sky-500/80 transition-colors duration-500;
 }
 
 img[data-content-image] {
@@ -34,6 +34,10 @@ pre {
   font-family: "DM Mono", monospace;
 }
 
+pre {
+  padding: 1rem;
+  overflow: auto;
+}
 code + code,
 pre + pre {
   @apply my-7;
